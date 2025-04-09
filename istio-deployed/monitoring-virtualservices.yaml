@@ -5,7 +5,7 @@ metadata:
   namespace: istio-system
 spec:
   hosts:
-  - "{{ .Values.domains.kiali }}"
+  - "kiali.172.165.147.47.nip.io"
   gateways:
   - monitoring-gateway
   http:
@@ -22,7 +22,7 @@ metadata:
   namespace: istio-system
 spec:
   hosts:
-  - "{{ .Values.domains.jaeger }}"
+  - "jaeger.172.165.147.47.nip.io"
   gateways:
   - monitoring-gateway
   http:
@@ -39,7 +39,7 @@ metadata:
   namespace: istio-system
 spec:
   hosts:
-  - "{{ .Values.domains.prometheus }}"
+  - "prometheus.172.165.147.47.nip.io"
   gateways:
   - monitoring-gateway
   http:
@@ -56,7 +56,7 @@ metadata:
   namespace: istio-system
 spec:
   hosts:
-  - "{{ .Values.domains.grafana }}"
+  - "grafana.172.165.147.47.nip.io"
   gateways:
   - monitoring-gateway
   http:

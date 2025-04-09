@@ -12,7 +12,7 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "{{ .Values.domains.kiali }}"
-    - "{{ .Values.domains.jaeger }}"
-    - "{{ .Values.domains.prometheus }}"
-    - "{{ .Values.domains.grafana }}"
+    - "kiali.172.165.147.47.nip.io"
+    - "jaeger.172.165.147.47.nip.io"
+    - "prometheus.172.165.147.47.nip.io"
+    - "grafana.172.165.147.47.nip.io"

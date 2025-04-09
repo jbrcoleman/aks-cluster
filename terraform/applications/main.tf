@@ -90,7 +90,7 @@ resource "helm_release" "argocd" {
     <<-EOF
     global:
       image:
-        tag: "${var.argocd_version}"
+        repository: quay.io/argoproj/argocd
     server:
       extraArgs:
         - --insecure

@@ -2,7 +2,7 @@
 replicaCount: 2
 
 image:
-  repository: ghcr.io/jbrcoleman/historical-network
+  repository: jbrcoleman/historical-network
   tag: latest
   pullPolicy: Always
 
@@ -24,6 +24,9 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
+
+application:
+  port: 8080
 
 ingress:
   enabled: true
@@ -87,3 +90,8 @@ monitoring:
   enabled: true
   scrapeInterval: 15s
   path: /metrics
+
+livenessProbe:
+  enabled: false
+readinessProbe:
+  enabled: false
