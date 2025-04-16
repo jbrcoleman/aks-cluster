@@ -1,8 +1,8 @@
 apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
-  name: historical-network-gateway
-  namespace: historical-network
+  name: argocd-gateway
+  namespace: argocd
 spec:
   selector:
     istio: ingressgateway
@@ -12,24 +12,24 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "historical-network.74.177.243.28.nip.io"
+    - "argocd.74.177.243.28.nip.io" 
 ---
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
-  name: historical-network
-  namespace: historical-network
+  name: argocd
+  namespace: argocd
 spec:
   hosts:
-  - "historical-network.74.177.243.28.nip.io"
+  - "argocd.74.177.243.28.nip.io"
   gateways:
-  - historical-network-gateway
+  - argocd-gateway
   http:
   - match:
     - uri:
         prefix: /
     route:
     - destination:
-        host: historical-network
+        host: argocd-server
         port:
           number: 80

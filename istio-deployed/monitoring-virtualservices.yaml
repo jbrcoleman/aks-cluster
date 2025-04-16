@@ -56,7 +56,7 @@ metadata:
   namespace: istio-system
 spec:
   hosts:
-  - "grafana.172.165.147.47.nip.io"
+  - "grafana.74.177.243.28.nip.io"
   gateways:
   - monitoring-gateway
   http:

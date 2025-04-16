@@ -12,7 +12,7 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "kiali.172.165.147.47.nip.io"
-    - "jaeger.172.165.147.47.nip.io"
-    - "prometheus.172.165.147.47.nip.io"
-    - "grafana.172.165.147.47.nip.io"
+    - "kiali.74.177.243.28.nip.io"
+    - "jaeger.74.177.243.28.nip.io"
+    - "prometheus.74.177.243.28.nip.io"
+    - "grafana.74.177.243.28.nip.io"
